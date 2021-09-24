@@ -88,7 +88,7 @@ img {
   display: block;
 }
 
-.btn {
+.btno {
   background-color: var(--secundario);
   display: block;
   color: var(--blanco);
@@ -102,20 +102,20 @@ img {
   width: 100%;
 }
 
-.btn:hover {
+.btno:hover {
   background-color: var(--secundario);
   cursor: pointer;
   color: var(--primario);
 }
 
 @media (min-width: 768px) {
-  .btn {
+  .btno {
     width: auto;
   }
 }
 
 /* UTILIADADES */
-.text-center {
+.texto-center {
   text-align: center;
 }
 
@@ -264,6 +264,7 @@ img {
   font-size: 2rem;
   background-color: var(--gris);
   border-radius: 2rem;
+  color:black;
 }
 
 .categoria a:hover {
@@ -413,28 +414,28 @@ img {
 }
 
 /* FOOTER */
-.footer__grid {
+.footer__grid0 {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.footer {
+.footer0 {
   border-top: 1px solid;
   margin-top: 5rem;
 }
 
-.footer__text {
+.footer__text0 {
   text-align: center;
 }
 
 @media (min-width: 768px) {
-  .footer__text {
+  .footer__text0 {
     margin-top: 5rem;
   }
 }
 
-.footer__nav a {
+.footer__nav0 a {
   display: block;
 }
 
@@ -444,7 +445,7 @@ img {
 }
 
 @media (min-width: 768px) {
-  .footer__grid {
+  .footer__grid0 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
