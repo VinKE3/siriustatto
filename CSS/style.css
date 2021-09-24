@@ -1,0 +1,674 @@
+:root {
+  --primario: #e56399ff;
+  --secundario: #30343fff;
+  --blanco: #fafffdff;
+  --grisclaro: #dfe9f3;
+  --gris: #adb5bd;
+  --oscuro: #0a0908ff;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2;
+  background-image: linear-gradient(
+    to top,
+    var(--grisclaro) 0%,
+    var(--gris) 100%
+  );
+}
+
+/* GLOBALES */
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  h1,
+  h2,
+  h3 {
+    margin: 0 0 2rem 0;
+  }
+}
+/* TIPOGRAFIA */
+h1 {
+  font-size: 4rem;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 5rem;
+  }
+}
+
+h2 {
+  font-size: 3.2rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 4rem;
+  }
+}
+h3 {
+  font-size: 2.4rem;
+}
+@media (min-width: 768px) {
+  h3 {
+    font-size: 3rem;
+  }
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.contenedor {
+  max-width: 180rem;
+  margin: 0 auto;
+}
+
+.contenedor2 {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.btn {
+  background-color: var(--secundario);
+  display: block;
+  color: var(--blanco);
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 1rem;
+  margin-top: 2rem;
+  transition: background-color 0.3s ease-out;
+  text-align: center;
+  border-radius: 2rem;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: var(--secundario);
+  cursor: pointer;
+  color: var(--primario);
+}
+
+@media (min-width: 768px) {
+  .btn {
+    width: auto;
+  }
+}
+
+/* UTILIADADES */
+.text-center {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .max-width-30 {
+    max-width: 30rem;
+  }
+}
+@media (min-width: 768px) {
+  .btn-30 {
+    width: 22rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .btn-re {
+    width: 30rem;
+  }
+}
+/* HEADER Y NAVEGACION */
+
+.nombre-sitio {
+  background-color: var(--primario);
+  padding: 4rem;
+  text-align: center;
+  margin: 0;
+  font-size: 5rem;
+}
+
+.nombre-sitio span {
+  color: var(--secundario);
+}
+.contenedor-navegacion {
+  border-top: 1px solid var(--primario);
+}
+.nav-principal {
+  /* es lo mismo
+  border-color: #e1e1e1;
+  border-top-style: solid;
+  border-width: 1px;
+   */
+  background-color: var(--secundario);
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  align-items: center;
+}
+.nav-principal a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 2rem;
+}
+@media (min-width: 768px) {
+  .nav-principal a {
+    padding: 0;
+  }
+}
+@media (min-width: 768px) {
+  .nav-principal {
+    /* es lo mismo
+    border-color: #e1e1e1;
+    border-top-style: solid;
+    border-width: 1px;
+     */
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.nav-principal a:hover {
+  background-color: var(--secundario);
+  color: var(--primario);
+}
+
+/* HERO */
+.hero {
+  background-image: url(../TATUAJES/star.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40rem;
+  position: relative;
+}
+
+.contenido-hero {
+  position: absolute;
+  background-color: rgb(0 0 0 /50%);
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenido-hero h2,
+.contenido-hero {
+  color: var(--blanco);
+}
+.ubicacion {
+  display: flex;
+  align-items: flex-end;
+}
+@media (min-width: 768px) {
+  .hero {
+    height: 55rem;
+  }
+}
+/* Categorias */
+
+@media (min-width: 768px) {
+  .listado-categorias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .listado-categorias {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.categorias {
+  padding: 5rem 0;
+}
+.categoria {
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .categoria {
+    margin-bottom: 0;
+  }
+}
+.categoria img {
+  width: 100%;
+}
+.categoria a {
+  display: block;
+  text-align: center;
+  padding: 2rem;
+  font-size: 2rem;
+  background-color: var(--gris);
+  border-radius: 2rem;
+}
+
+.categoria a:hover {
+  background-color: var(--primario);
+  color: #ffffff;
+  border-radius: 2rem;
+}
+
+/* Seccion Nosotros */
+
+.sobre-nosotros {
+  background-image: linear-gradient(
+      to bottom,
+      transparent 50%,
+      var(--primario) 50%,
+      var(--primario) 100%
+    ),
+    url(../TATUAJES/Lumi-tatuando/LUMI.jpg);
+
+  background-repeat: no-repeat;
+  background-position: center, top center;
+  background-size: 100%, 70rem;
+}
+
+@media (min-width: 768px) {
+  .sobre-nosotros {
+    background-image: linear-gradient(
+        to right,
+        transparent 50%,
+        var(--primario) 50%,
+        var(--primario) 100%
+      ),
+      url(../TATUAJES/Lumi-tatuando/LUMI.jpg);
+    background-position: center;
+    background-size: 100%, 160rem;
+  }
+}
+
+.sobre-nosotros-grid {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 5rem;
+}
+
+@media (min-width: 768px) {
+  .sobre-nosotros-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: unset;
+  }
+}
+
+.texto-nosotros {
+  grid-row: 2 / 3;
+  color: #ffffff;
+  padding: 5rem;
+}
+
+@media (min-width: 768px) {
+  .texto-nosotros {
+    grid-column: 2 / 3;
+  }
+}
+
+/*Listado de Productos */
+
+.contenido-principal {
+  padding-top: 5rem;
+}
+
+@media (min-width: 768px) {
+  .listado-productos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+  }
+
+  .producto:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+
+  .producto:nth-child(1) img {
+    height: 43rem;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .producto:nth-child(2) {
+    grid-column: 1 / 4;
+  }
+
+  .producto:nth-child(2) img,
+  .producto:nth-child(3) img {
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .producto:nth-child(3) {
+    grid-column: 4 / 7;
+  }
+
+  .producto:nth-child(4) {
+    grid-column: 1 / 3;
+  }
+
+  .producto:nth-child(5) {
+    grid-column: 3 / 5;
+  }
+
+  .producto:nth-child(6) {
+    grid-column: 5 / 7;
+  }
+}
+
+.producto {
+  background-color: var(--primario);
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .producto {
+    margin-bottom: 0;
+  }
+}
+
+.producto:last-of-type {
+  margin-bottom: 0;
+}
+
+.texto-producto {
+  text-align: center;
+  color: #ffffff;
+  padding: 5rem;
+}
+.texto-producto h3 {
+  margin: 0;
+}
+.texto-producto p {
+  margin: 0 0 0.5rem 0;
+}
+.texto-producto .precio {
+  font-size: 2.8rem;
+  font-weight: 900;
+}
+
+/* FOOTER */
+.footer__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer {
+  border-top: 1px solid;
+  margin-top: 5rem;
+}
+
+.footer__text {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer__text {
+    margin-top: 5rem;
+  }
+}
+
+.footer__nav a {
+  display: block;
+}
+
+.footer__copyrigth {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+@media (min-width: 768px) {
+  .footer__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* NOSOTROS */
+
+.contenido-nosotros {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  column-gap: 4rem;
+}
+
+.informacion-nosotros {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem;
+}
+@media (min-width: 768px) {
+  .informacion-nosotros {
+    padding: 0;
+  }
+}
+/* Blog */
+
+@media (min-width: 768px) {
+  .contenedor-blog {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.entrada {
+  border-bottom: 2px solid var(--primario);
+  padding-bottom: 4rem;
+  margin-bottom: 2rem;
+}
+
+.entrada h2 {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .entrada h2 {
+    text-align: left;
+  }
+}
+
+.contenido-blog {
+  padding: 2rem;
+}
+
+.entrada:last-of-type {
+  border: none;
+}
+@media (min-width: 768px) {
+  .entrada-meta {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.entrada-meta p {
+  font-weight: 700;
+}
+.entrada-meta span {
+  color: var(--oscuro);
+  font-weight: 900;
+}
+
+.contenido-entrada-blog {
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .contenido-entrada-blog {
+    width: 65rem;
+  }
+}
+aside {
+  padding: 2rem;
+}
+/* GALERIA */
+
+.galeria {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .galeria {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .galeria {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+
+.galeria img {
+  height: 40rem;
+  width: 40rem;
+  object-fit: cover;
+}
+
+/* FORMULARIO */
+.formulario {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.formulario fieldset {
+  border: 1px solid black;
+  margin-bottom: 2rem;
+}
+
+.formulario legend {
+  background-color: var(--primario);
+  width: 100%;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.campo {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.campo label {
+  flex-basis: 10rem;
+}
+
+.campo input:not([type="radio"]),
+.campo textarea,
+.campo select {
+  flex: 1;
+  border: 1px solid #e1e1e1;
+}
+/* Tablas */
+.conteiner-table {
+  width: 90%;
+  margin: 50px auto;
+}
+.table {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  table-layout: fixed;
+}
+
+.table caption {
+  font-size: 4rem;
+  background-color: var(--primario);
+  color: var(--blanco);
+}
+
+.table tr {
+  background-color: var(--grisclaro);
+}
+
+.table th {
+  font-size: 2.5rem;
+  text-align: center;
+  border: 1px solid var(--primario);
+  padding: 1rem;
+}
+
+.table td {
+  font-size: 2rem;
+  text-align: center;
+  border: 1px solid var(--primario);
+  padding: 1rem;
+}
+
+@media (max-width: 765px) {
+  .table {
+    border: none;
+  }
+  .table caption {
+    font-size: 3rem;
+  }
+
+  .table th {
+    display: none;
+    font-size: 2.5rem;
+  }
+  .table tr {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+    display: block;
+  }
+
+  .table td {
+    display: block;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    text-transform: uppercase;
+    float: left;
+  }
+}
